@@ -1,0 +1,80 @@
+/* TEAM PAGE */
+
+#team {
+  overflow: hidden;
+  text-align: center;
+  background-image: url('../../assets/gfx-c/homepage/lights.jpeg');
+  background-position: top;
+  background-size: cover;
+
+  .full-height {
+    background-color: $overlay;
+
+    ul {
+      li {
+        display: inline-block;
+        position: relative;
+        width: 25%;
+        padding: 0px 10px;
+        animation: slide-right;
+
+        .box-outer {
+          height: 500px;
+          padding: 20px;
+          box-shadow: $light-shadow;
+          background-color: rgba(255,255,255,0.75);
+          border-radius: $radius;
+
+          hr {
+            display: block;
+            margin: 30px 0px;
+            border-top: $border;
+            border-color: #ccc;
+          }
+
+          img {
+            width: 150px;
+            height: 150px;
+            opacity: 0.75;
+            border-radius: 100%;
+            filter: grayscale(100%);
+          }
+
+          p:first-of-type {
+            font-family: $heading-font-1;
+          }
+
+          p:last-of-type {
+            margin: 15px 0px;
+            font-size: 14px;
+            color: $grey;
+          }
+
+          ul {
+            margin-top: 15px;
+
+            li {
+              width: auto;
+              margin: 0px 5px;
+
+              a {
+                text-decoration: none;
+                color: $color;
+
+                i {
+                  font-size: 1.5em;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @for $i from 1 through 5 {
+        li:nth-child(#{$i}) {
+          animation-duration: #{$i / 2}s;
+        }
+      }
+    }
+  }
+}

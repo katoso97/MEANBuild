@@ -1,0 +1,116 @@
+<div class="row" id="dashboard"> <!-- dashboard page -->
+  <div class="wrap">
+
+    <div class="col-md-3 full-height">
+      <div class="box-outer dashboard-title">
+        <div class="box-inner">
+          <h4>Recent Projects <span>{{controller.user.projects.length}}</span></h4>
+        </div>
+      </div>
+      <div id="sidebar">
+        <ul>
+          <li ng-repeat="project in controller.user.projects">
+            <div>
+              <p>{{project.title}}</p>
+            </div>
+            <div>
+              <p>{{project.dateCreated}}</p>
+            </div>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-9" id="profile">
+
+      <div class="row" id="top">
+        <div class="col-md-3">
+          <img ng-src="{{controller.user.profilePicture}}" alt="{{controller.user.fullName}}">
+          <ul>
+            <li><a href="{{controller.user.githubURL}}"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="{{controller.user.bitbucketURL}}"><i class="fa fa-bitbucket" aria-hidden="true"></i></a></li>
+            <li><a href="{{controller.user.linkedinURL}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          </ul>
+
+          <a href="#" class="custom-btn custom-btn-blue" ng-click="controller.editProfile()">Edit Profile</a>
+        </div>
+
+        <div class="col-md-9">
+
+          <div class="row">
+
+            <div class="col-sm-7">
+              <div class="box-outer dashboard-title">
+                <div class="box-inner">
+                  <h4>Welcome, {{controller.user.username}}</h4>
+                </div>
+              </div>
+
+              <p><span>Name</span> <span>{{controller.user.fullName}}</span></p>
+              <p><span>Email</span> <span>{{controller.user.email}}</span></p>
+              <p><span>Joined</span> <span>{{controller.user.dateCreated | date : 'MMMM dd'}}</span></p>
+
+              <hr>
+
+              <a href="" ng-click="controller.displayCreationPage()" class="custom-btn custom-btn-green">Create Project</a>
+              <a href="https://raw.githubusercontent.com/meanbuild/CLI/master/build.zip" download='build.zip' class="custom-btn custom-btn-red">Download CLI</a>
+            </div>
+
+            <div class="col-sm-5">
+              <div class="box-outer dashboard-title">
+                <div class="box-inner">
+                  <h4>Projects Created</h4>
+                </div>
+              </div>
+
+              <div class="box-outer dashboard-value">
+                <div class="box-inner">
+                  <h2>{{controller.user.projects.length}}</h2>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="bottom">
+        <div class="col-md-12">
+
+          <ul ng-repeat='project in controller.user.projects'>
+            <li >
+              <div class="box-outer dashboard-title">
+                <div class="box-inner">
+                  <h4>{{project.title}}\'s models</h4>
+                </div>
+              </div>
+              <div class="box-outer dashboard-value">
+                <div class="box-inner">
+                  <h2>{{project.models.length}}</h2>
+                </div>
+              </div>
+            </li>
+
+            <li ng-repeat='model in project.models'>
+              <div class="box-outer dashboard-title">
+                <div class="box-inner">
+                  <h4>Properties in {{model.modelName}}</h4>
+                </div>
+              </div>
+              <div class="box-outer dashboard-value">
+                <div class="box-inner">
+                  <h2>{{model.properties.length}}</h2>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div> <!-- end dashboard page -->

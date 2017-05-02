@@ -1,0 +1,42 @@
+/* CUSTOM FORM LAYOUT */
+
+.custom-form {
+  padding: 50px 20px;
+  box-shadow: 5px 5px 15px $dark;
+  background-color: rgba(255,2552,255,0.75);
+  color: $dark-blue;
+  border-radius: $radius;
+  border: $border;
+  border-color: #ccc;
+
+  h4 {
+    margin-bottom: 20px;
+    text-shadow: $light-shadow;
+  }
+
+  input, select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: $white;
+    color: $color;
+    border-radius: $radius;
+    border: $border;
+    border-color: $grey;
+    outline: none;
+    transition: $trans;
+  }
+
+  select {
+    -webkit-appearance: none;
+  }
+
+  input:focus, select:focus {
+    box-shadow: 0px 0px 10px $dark;
+  }
+
+  button {
+    border: none;
+    outline: none;
+  }
+}

@@ -1,0 +1,70 @@
+/* ABOUT PAGE */
+
+#about {
+  background-image: url('../../assets/gfx-c/homepage/lights.jpeg');
+  background-position: top;
+  background-size: cover;
+
+  .full-height {
+    padding: 0px !important;
+    background-color: $overlay;
+
+    .row {
+      height: 100%;
+
+      .wrap {
+        height: 100%;
+        padding: 50px 10px;
+        overflow: hidden;
+        box-shadow: 5px 0 10px -2.5px $dark, -5px 0 10px -2.5px $dark;
+        background-color: rgba(255,255,255,0.75);
+
+        .content {
+          max-width: 600px;
+          margin: 0 auto;
+
+          h2 {
+            margin-bottom: 50px;
+            padding: 10px;
+            border-bottom: $border;
+            border-color: $grey;
+          }
+
+          h4 {
+            position: relative;
+            margin-bottom: 20px;
+            animation: slide-right 2s;
+          }
+
+          p {
+            position: relative;
+            margin-bottom: 50px;
+            line-height: 1.75em;
+            animation: slide-left 2s;
+          }
+
+          ul {
+            margin-bottom: 50px;
+
+            li {
+              position: relative;
+              margin-bottom: 15px;
+              list-style-type: none;
+              animation: slide-left;
+
+              i {
+                margin-right: 5px;
+              }
+            }
+
+            @for $i from 1 through 10 {
+              li:nth-child(#{$i}) {
+                animation-duration: #{$i / 2}s
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

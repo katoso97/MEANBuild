@@ -1,0 +1,22 @@
+#lost {
+  overflow: hidden;
+  background-image: url('../../assets/gfx-c/404/lost.jpg');
+  background-position: center;
+  background-size: cover;
+
+  .overlay-color {
+    color: $white;
+
+    .box-inner {
+      padding: 20px 0px;
+      vertical-align: bottom;
+
+      h1 {
+        position: relative;
+        text-shadow: $dark-shadow;
+        font-size: 5em;
+        animation: slide-left 1s;
+      }
+    }
+  }
+}

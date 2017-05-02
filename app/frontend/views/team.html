@@ -1,0 +1,34 @@
+<div class="row" id="team">
+  <div class="box-outer full-height">
+    <div class="box-inner">
+
+      <div class="row">
+        <div class="wrap">
+          <div class="col-md-12">
+              <h1>meet the team</h1>
+            <ul>
+              <li ng-repeat="developer in controller.team">
+                <div class="box-outer">
+                  <div class="box-inner">
+                    <img ng-src="{{developer.image}}" alt="{{developer.name}}">
+                    <hr>
+                    <p>{{developer.name}}</p>
+                    <p>{{developer.title}}</p>
+                    <hr>
+                    <ul>
+                      <li><a href="{{developer.githubURL}}"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                      <li><a href="{{developer.linkedinURL}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                      <li><a href="mailto:{{developer.email}}"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

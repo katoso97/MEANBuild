@@ -1,0 +1,50 @@
+/* CUSTOM BUTTON STYLE (DEFAULT) */
+
+.custom-btn {
+  display: inline-block;
+  width: auto;
+  min-width: 250px;
+  padding: 20px;
+  box-shadow: $dark-shadow;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  background-color: transparent;
+  font-family: $heading-font-1;
+  font-size: 14px;
+  color: $white !important;
+  border-radius: $radius;
+  border: none;
+  outline: none;
+  transition: $trans;
+}
+
+/* CUSTOM BUTTON STYLE (RED) */
+
+.custom-btn-red {
+  background-color: $dark-red;
+}
+
+.custom-btn-red:hover {
+  background-color: $light-red;
+}
+
+/* CUSTOM BUTTON STYLE (GREEN) */
+
+.custom-btn-green {
+  background-color: $dark-green;
+}
+
+.custom-btn-green:hover {
+  background-color: $light-green;
+}
+
+/* CUSTOM BUTTON STYLE (BLUE) */
+
+.custom-btn-blue {
+  background-color: $dark-blue;
+}
+
+.custom-btn-blue:hover {
+  background-color: $light-blue;
+}

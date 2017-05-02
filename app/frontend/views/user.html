@@ -1,0 +1,62 @@
+<div class="row" id="user"> <!-- edit user profile page -->
+  <div class="wrap">
+
+    <div class="col-md-8">
+      <div class="row">
+
+        <div class="col-md-3">
+          <img src="{{controller.user.profilePicture}}" alt="{{controller.user.fullName}}">
+
+          <button type="button" class="custom-btn custom-btn-blue" ng-click="controller.cancel()">Cancel</button>
+        </div>
+
+        <div class="col-md-9">
+          <form class="custom-form">
+            <h4>Edit Profile</h4>
+
+            <h5>Full Name</h5>
+            <input type="text" placeholder="Full Name" ng-model="controller.user.fullName" required>
+            <h5>Username</h5>
+            <input type="text" placeholder="Username" ng-model="controller.user.username" required>
+            <h5>Email</h5>
+            <input type="email" placeholder="Email" ng-model="controller.user.email" required>
+            <h5>Profile Picture URL</h5>
+            <input type="text" placeholder="Profile Picture URL" ng-model="controller.user.profilePicture">
+
+            <button type="button" class="custom-btn custom-btn-green" ng-click="controller.updateUser()">Update</button>
+          </form>
+
+          <hr class="seperator">
+
+          <form class="custom-form">
+            <h4>Quick Connect</h4>
+            <h5>GitHub Profile URL</h5>
+            <input type="text" placeholder="GitHub URL" ng-model="controller.user.githubURL">
+            <h5>BitBucket Profile URL</h5>
+            <input type="text" placeholder="BitBucket URL" ng-model="controller.user.bitbucketURL">
+            <h5>LinkedIn Profile URL</h5>
+            <input type="text" placeholder="Linkedin URL" ng-model="controller.user.linkedinURL">
+
+            <button type="button" class="custom-btn custom-btn-green" ng-click="controller.updateUser()">Update</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <form class="custom-form">
+        <h4>Change Password</h4>
+        <input type="password" placeholder="Password" ng-model="controller.newPassword" required>
+        <input type="password" placeholder="Verify Password" ng-model="controller.newPasswordCheck" required>
+
+        <button type="button" class="custom-btn custom-btn-green">Change</button>
+      </form>
+
+      <hr class="seperator">
+
+      <button type="button" class="custom-btn custom-btn-red" ng-click="controller.deleteAccount()">Delete Account</button>
+    </div>
+
+  </div>
+</div> <!-- end edit user profile page -->

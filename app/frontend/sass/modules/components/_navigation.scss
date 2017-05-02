@@ -1,0 +1,33 @@
+/* PRIMARY NAVIGATION BAR (TEMPLATE) */
+
+@mixin links($display, $spacing, $color) {
+  ul {
+    li {
+      display: $display;
+      list-style-type: none;
+
+      a {
+        display: $display;
+        padding: $spacing 20px;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: $heading-font-1;
+        font-weight: bold;
+        font-size: 12px;
+        color: $color;
+        transition: $trans;
+      }
+
+      a:hover {
+        background-color: $light-blue;
+      }
+    }
+  }
+}
+
+/* PRIMARY NAVIGATION BAR */
+
+#nav {
+  @include links(inline-block, 15px, $white);
+}

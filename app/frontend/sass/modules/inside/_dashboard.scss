@@ -1,0 +1,225 @@
+#dashboard {
+  overflow: hidden;
+  background-color: $overlay;
+
+  .dashboard-title {
+    height: 50px;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: $light-shadow;
+    background-color: $white;
+    border-radius: $radius;
+
+    h4 {
+      text-shadow: none;
+      font-family: $text-font-1;
+      font-size: 14px;
+
+      span {
+        margin-left: 5px;
+        padding: 6px 12px;
+        box-shadow: $dark-shadow;
+        text-shadow: 1px 1px 2px #777;
+        background-color: $light-blue;
+        color: $white;
+        border-radius: $radius;
+      }
+    }
+  }
+
+  .dashboard-value {
+    height: 175px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: $light-shadow;
+    background-color: $white;
+    color: $light-blue;
+    border-radius: $radius;
+
+    h2 {
+      font-size: 5em;
+    }
+  }
+
+  .col-md-3 {
+    position: relative;
+    animation: slide-right 2s;
+    width: 320px;
+    height: 100%;
+    padding-right: 10px;
+
+    #sidebar {
+      height: calc(100% - 60px);
+      overflow: auto;
+      background-color: #eee;
+      border-radius: $radius;
+      border: $border;
+      border-color: #ddd;
+    }
+  }
+
+  #profile {
+    position: relative;
+    animation: slide-right 1s;
+    width: calc(100% - 320px);
+    padding: 20px 0px 10px 0px;
+
+    .custom-btn {
+      padding: 10px;
+      font-size: 12px;
+    }
+
+    #top {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #eee;
+      border-radius: $radius;
+      border: $border;
+      border-color: #ddd;
+
+      .col-md-3 {
+        width: 200px;
+        padding-right: 20px;
+        text-align: center;
+
+        img {
+          width: 100%;
+          height: 180px;
+          margin-bottom: 10px;
+          background-color: #ddd;
+          border-radius: $radius;
+        }
+
+        ul {
+          li {
+            display: inline-block;
+            margin: 0px 15px;
+
+            a {
+              text-decoration: none;
+              color: $color;
+
+              i {
+                font-size: 1.5em;
+              }
+            }
+          }
+
+          li:first-of-type {
+            margin-left: 0px;
+          }
+
+          li:last-of-type {
+            margin-right: 0px;
+          }
+        }
+
+        .custom-btn {
+          min-width: 100%;
+          margin-top: 10px;
+        }
+      }
+
+      .col-md-9 {
+        width: calc(100% - 200px);
+        padding-left: 20px;
+
+        .row {
+          margin-bottom: 20px;
+
+          .col-sm-7 {
+            padding-right: 10px;
+
+            p {
+              margin-bottom: 10px;
+              font-family: $text-font-2;
+              font-weight: bold;
+              font-size: 14px;
+              color: $grey;
+
+              span:first-of-type {
+                display: inline-block;
+                width: 50px;
+                color: $grey;
+              }
+
+              span:last-of-type {
+                display: inline-block;
+                margin-left: 10px;
+                color: $color;
+              }
+            }
+
+            p:last-of-type {
+              margin-bottom: 0px;
+            }
+
+            hr {
+              display: block;
+              margin: 30px 0px;
+              box-shadow: $light-shadow;
+              border-top: $border;
+              border-color: $grey;
+            }
+
+            .custom-btn {
+              margin-top: 10px;
+              padding: 10px;
+              font-size: 12px;
+            }
+
+            .custom-btn:first-of-type {
+              margin-top: 0px;
+            }
+          }
+
+          .col-sm-5 {
+            padding-left: 10px;
+          }
+        }
+
+        .row:last-of-type {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    #bottom {
+      overflow: hidden;
+
+      ul {
+        li {
+          position: relative;
+          display: inline-block;
+          width: calc(50% - 3px);
+          padding: 0px 10px;
+          animation: slide-right;
+
+          .dashboard-value {
+            height: 300px;
+            margin-bottom: 10px;
+
+            h2 {
+              font-size: 7em;
+            }
+          }
+        }
+
+        @for $i from 1 through 6 {
+          li:nth-child(#{$i}) {
+            animation-duration: #{$i}s;
+          }
+        }
+
+        li:nth-child(odd) {
+          padding-left: 0px;
+        }
+
+        li:nth-child(even) {
+          padding-right: 0px;
+        }
+      }
+    }
+  }
+}

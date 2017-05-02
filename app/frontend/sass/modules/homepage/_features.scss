@@ -1,0 +1,44 @@
+#features {
+  padding: 100px 0px;
+  text-align: center;
+  background-color: $dark-blue;
+  color: $white;
+
+  .wrap {
+    padding: 0px;
+
+    h2 {
+      margin-bottom: 100px;
+      padding: 0px 10px;
+      text-shadow: $dark-shadow;
+    }
+
+    ul {
+      li {
+        display: inline-block;
+        width: 25%;
+        padding: 0px 10px;
+
+        .box-outer {
+          height: 450px;
+          box-shadow: $dark-shadow;
+          background-image: url('../../assets/gfx-c/textures/k15448319.jpg');
+          background-repeat: repeat;
+          border-radius: $radius;
+
+          .box-inner {
+            padding: 10px;
+            background-color: rgba(54,69,79,0.75);
+
+            h4 {
+              margin: 50px 0px;
+              text-shadow: none;
+              font-family: $text-font-2;
+              font-size: 0.9em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

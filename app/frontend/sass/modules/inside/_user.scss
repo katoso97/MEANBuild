@@ -1,0 +1,63 @@
+/* EDIT USER PROFILE PAGE */
+
+#user {
+  padding: 20px 0px;
+  background-color: $overlay;
+
+  .custom-btn {
+    min-width: 100%;
+  }
+
+  .custom-form {
+    padding: 20px;
+    box-shadow: $light-shadow;
+
+    .custom-btn {
+      min-width: 200px;
+      max-width: 200px;
+      padding: 10px;
+    }
+
+    input {
+      margin-bottom: 15px;
+      padding: 10px;
+    }
+
+    h5 {
+      text-shadow: none;
+    }
+  }
+
+  .seperator {
+    margin: 20px 0px;
+    box-shadow: $light-shadow;
+  }
+
+  .col-md-8 {
+    width: calc(100% - 350px);
+    padding-right: 20px;
+
+    .col-md-3 {
+      width: 200px;
+      padding-right: 20px;
+
+      img {
+        width: 100%;
+        height: 180px;
+        margin-bottom: 20px;
+        background-color: #ddd;
+        border-radius: $radius;
+      }
+    }
+
+    .col-md-9 {
+      width: calc(100% - 200px);
+      padding-left: 20px;
+    }
+  }
+
+  .col-md-4 {
+    width: 350px;
+    padding-left: 20px;
+  }
+}

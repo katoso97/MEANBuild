@@ -1,0 +1,25 @@
+/* IMPORT SCSS MODULES (PARTIALS) */
+
+@import 'components/box';
+@import 'components/button';
+@import 'components/navigation';
+@import 'components/form';
+
+@import 'template/animations';
+@import 'template/header';
+@import 'template/footer';
+@import 'template/404';
+
+@import 'homepage/homepage';
+@import 'homepage/intro';
+@import 'homepage/carousel';
+@import 'homepage/features';
+@import 'homepage/tech';
+
+@import 'inside/register';
+@import 'inside/about';
+@import 'inside/team';
+@import 'inside/documentation';
+@import 'inside/dashboard';
+@import 'inside/user';
+@import 'inside/create';

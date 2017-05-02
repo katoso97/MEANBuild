@@ -1,0 +1,65 @@
+<div class="row" id="register">
+  <div class="box-outer full-height">
+    <div class="box-inner">
+
+      <div class="row">
+        <div class="wrap">
+
+          <div class="col-md-4">
+            <form ng-submit="controller.createUser()" name="signupForm">
+                  <h4>Create a new account</h4>
+
+                  <div class="form-group has-feedback" ng-class="{ 'has-error' : signupForm.email.$invalid && signupForm.email.$dirty }">
+                    <input class="form-control input-lg" type="text" id="email" name="email" ng-model="controller.newUser.email" placeholder="Email" required>
+                    <span class="ion-at form-control-feedback"></span>
+                  </div>
+
+                  <div class="form-group has-feedback" ng-class="{ 'has-error' : signupForm.username.$invalid && signupForm.username.$dirty }">
+                    <input class="form-control input-lg" type="text" id="username" name="username" ng-model="controller.newUser.username" placeholder="Username" required>
+                    <span class="ion-at form-control-feedback"></span>
+                  </div>
+
+                  <div class="form-group has-feedback" ng-class="{ 'has-error' : signupForm.fullName.$invalid && signupForm.fullName.$dirty }">
+                    <input class="form-control input-lg" type="text" id="fullName" name="fullName" ng-model="controller.newUser.fullName" placeholder="Full name" required>
+                    <span class="ion-at form-control-feedback"></span>
+                  </div>
+
+
+                  <div class="form-group has-feedback" ng-class="{ 'has-error' : signupForm.password.$invalid && signupForm.password.$dirty }">
+                    <input class="form-control input-lg" type="password" name="password" ng-model="controller.newUser.password" placeholder="Password" required>
+                    <span class="ion-key form-control-feedback"></span>
+                  </div>
+
+                  <div class="form-group has-feedback" ng-class="{ 'has-error' : signupForm.checkPassword.$invalid && signupForm.checkPassword.$dirty }">
+                    <input class="form-control input-lg" type="password" id="checkPassword" name="checkPassword" ng-model="controller.checkPassword" placeholder="Enter Password Again" required>
+                    <span class="ion-at form-control-feedback"></span>
+                  </div>
+                  <!-- <p class="text-center text-muted"><small>By clicking on Sign up, you agree to <a href="#">terms & conditions</a> and <a href="#">privacy policy</a></small></p> -->
+
+                  <button ng-if='(controller.newUser.password==controller.checkPassword)' class="btn btn-block custom-btn-blue">Sign up</button>
+
+                  <p class="text-center text-muted"><small>Already have an account? <a href="/login">Log in now</a></small></p>
+                </form>
+          </div>
+
+          <div class="col-md-8">
+            <h1>Full-stack automation for your next idea</h1>
+
+            <ul>
+              <li><i class="fa fa-check" aria-hidden="true"></i>Build a professional application in minutes</li>
+              <li><i class="fa fa-check" aria-hidden="true"></i>Spend more time creating an awesome design</li>
+              <li><i class="fa fa-check" aria-hidden="true"></i>Increase your productivity</li>
+              <li><i class="fa fa-check" aria-hidden="true"></i>No boilerplate code</li>
+              <li><i class="fa fa-check" aria-hidden="true"></i>Keep track of the projects you've created</li>
+            </ul>
+
+            <a ui-sref="documentation" class="custom-btn custom-btn-blue">Documentation</a>
+            <a href="https://github.com/meanbuild" class="custom-btn custom-btn-blue">View on GitHub</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

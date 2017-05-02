@@ -1,0 +1,61 @@
+/* REGISTRATION PAGE */
+
+#register {
+  background-image: url('../../assets/gfx-c/homepage/mountain.jpg');
+  background-position: top;
+  background-size: cover;
+
+  .box-outer {
+    background-color: $overlay;
+
+    .col-md-4 {
+      position: relative;
+      width: 400px;
+      padding-right: 20px;
+      animation: slide-right 1s;
+    }
+
+    .col-md-8 {
+      position: relative;
+      width: calc(100% - 400px);
+      padding-left: 20px;
+      color: $white;
+      animation: slide-left 1s;
+
+      h1 {
+        margin-bottom: 50px;
+        text-shadow: $dark-shadow;
+        font-size: 3em;
+      }
+
+      ul {
+        margin-bottom: 50px;
+
+        li {
+          position: relative;
+          margin-bottom: 30px;
+          list-style-type: none;
+          font-family: $heading-font-1;
+          font-size: 1.25em;
+          color: $dark-blue;
+          animation: slide-left;
+
+          i {
+            margin-right: 10px;
+          }
+        }
+
+        @for $i from 1 through 10 {
+          li:nth-child(#{$i}) {
+            animation-duration: #{$i / 2}s
+          }
+        }
+      }
+
+      .custom-btn-blue {
+        width: calc(50% - 3px);
+        padding: 30px 20px;
+      }
+    }
+  }
+}

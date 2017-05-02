@@ -1,0 +1,83 @@
+<div class="row" id="dashboard"> <!-- dashboard -->
+
+  <div class="row">
+    <div class="wrap">
+
+      <div class="col-md-4">
+        <form class="custom-form">
+          <h4>Create New Project</h4>
+
+          <input ng-model='controller.newProject.title  ' type="text" placeholder="Project Name" required="true">
+          <input ng-model='controller.newProject.connectionString' type="text" placeholder="MongoLab Connection String" required="true">
+
+          <button ng-if='controller.madeProject == false' ng-click='controller.startProject()' class="custom-btn custom-btn-blue">Create</button>
+        </form>
+
+        <hr class="seperator">
+
+        <form class="custom-form">
+          <h4>Add New Model</h4>
+
+          <input ng-model='controller.model.modelName' type="text" placeholder="Model Name" required="true">
+
+          <button ng-click='controller.createNewModel()' class="custom-btn custom-btn-green"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        </form>
+
+        <hr class="seperator">
+
+        <form class="custom-form">
+          <h4>Add New Model Property</h4>
+
+          <select>
+            <option value="#" selected disabled>Select Model</option>
+            <option ng-model='controller.selectedModel' ng-repeat='model in controller.newProject.models track by $index' value="{{model}}">{{model.modelName}}</option>
+          </select>
+          <button ng-click='getModel()'>getModel</button>
+          <input type="text" placeholder="Property Name" required="true">
+          <select ng-model='controller.selectedModel.dataType'>
+            <option value="#" selected disabled>Select Data Type</option>
+            <option value="String">String</option>
+            <option value="Number">Number</option>
+            <option value="Date">Date</option>
+            <option value="Buffer">Buffer</option>
+            <option value="Boolean">Boolean</option>
+            <option value="Mixed">Mixed</option>
+            <option value="ObjectId">ObjectId</option>
+            <option value="Array">Array</option>
+            <option value="Enum String">Enum String</option>
+          </select>
+          <select>
+            <option value="#" selected disabled>Requirement</option>
+            <option value="true">Required</option>
+            <option value="false">Not Required</option>
+          </select>
+
+          <button ng-submit='createNewProperty()' class="custom-btn custom-btn-green"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        </form>
+      </div>
+
+      <div class="col-md-8">
+        <form class="custom-form">
+          <h4>New Project Summary</h4>
+
+          <div id="scroll">
+            <p class="summary-title"><span>Project Name</span> <span>{{controller.newProject.title}}</span></p>
+            <p class="summary-title"><span>MongoLab Connection String</span> <span>{{controller.newProject.connectionString}}</span></p>
+
+            <div ng-repeat='currentModel in controller.newProject.models track by $index' class="model">
+              <p  class="summary-title"><span>Model</span> <span>{{currentModel.modelName}}</span></p>
+
+              <div class="entity">
+                <p ng-repeat='property in model.properties'><span>Property</span> | <span>{{property.propertyName}}</span> | <span>{{property.dataType}}</span> | <span>{{property.required}}</span></p>
+              </div>
+            </div>
+          </div>
+
+          <button class="custom-btn custom-btn-green">Create Project</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</div> <!-- end dashboard controller -->
